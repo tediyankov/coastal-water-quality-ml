@@ -53,7 +53,7 @@
 
 - **Unitary results:** the notebook produces test-set tables of R², RMSE, POD and CSI for every model × target, a validation-to-test generalisation table, and automated verdicts (best baseline vs best tree model, the value of SST, and the value of spatial context).
 - **Intersectional results:** CNN 9×9 vs 1×1 RMSE by coastal/offshore and by SST-gradient tercile. Random-location vs spatial-block R² with and without coordinates.
-- Headline results (2022 test year): best tree models and the best pixel climatology are within ±0.02 R² for every target (Chl-a ≈ 0.48–0.50, NDCI-like ≈ 0.35, turbidity ≈ 0.41–0.42). SST adds no robust skill beyond location and season. The 9×9 CNN beats the 1×1 CNN for NDCI-like and turbidity (+0.03 to +0.06 R²) but not for Chl-a, and both CNNs trail the Random Forest. All models lose about 0.3 R² from 2021 to 2022.
+- Headline results (2022 test year): best tree models and the best pixel climatology are within ±0.02 R² for every target (Chl-a ≈ 0.48–0.50, NDCI-like ≈ 0.35, turbidity ≈ 0.41–0.42). SST adds no robust skill beyond location and season. The 9×9 CNN beats the 1×1 CNN for NDCI-like and turbidity (+0.03 to +0.06 R²) but not for Chl-a, and both CNNs trail the Random Forest. All models lose about 0.3 R² from 2021 to 2022 and overpredict 2022 (Chl-a about 1.5× too high on average), consistent with the 2022 Po River drought.
 - Exact numbers depend on the CMEMS data version and are printed when the notebook is run.
 
 ## Ethical Considerations
