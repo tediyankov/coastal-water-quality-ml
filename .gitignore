@@ -1,0 +1,8 @@
+# downloaded CMEMS data and run outputs
+data/
+*.nc
+*.pt
+/emissions.csv
+.ipynb_checkpoints/
+__pycache__/
+.DS_Store
