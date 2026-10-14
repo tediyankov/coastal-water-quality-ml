@@ -79,7 +79,7 @@ Participants should be familiar with:
 - xarray, netCDF4
 - copernicusmarine 2.x
 - cartopy, cmocean, seaborn
-- codecarbon (optional, for emissions tracking)
+- codecarbon (optional, installed by the emissions-tracking cell)
 
 See `requirements.txt` for the complete environment.
 
