@@ -1,9 +1,9 @@
 # Monitoring Coastal Water Quality and Marine Ecosystem Change Using Satellite Remote Sensing and Machine Learning
 
-![Python](https://img.shields.io/badge/language-Python%203.12-blue)
+![Python](https://img.shields.io/badge/language-Python%203.13-blue)
 ![Jupyter Notebook](https://img.shields.io/badge/Jupyter-Notebook-orange)
 ![PyTorch](https://img.shields.io/badge/PyTorch-2.x-ee4c2c)
-![scikit-learn](https://img.shields.io/badge/scikit--learn-1.4.2-f7931e)
+![scikit-learn](https://img.shields.io/badge/scikit--learn-1.9-f7931e)
 ![MIT License](https://img.shields.io/badge/license-MIT-green)
 
 ## Abstract
@@ -69,17 +69,17 @@ Participants should be familiar with:
 
 **Primary language:** Python
 
-**Language version:** Python 3.12 (Google Colab default); also tested with Python 3.11
+**Language version:** Python 3.13 (Google Colab default)
 
 ### Major Packages
 
-- numpy 1.26.4
-- scikit-learn 1.4.2
-- torch 2.x (CUDA 11.8 build on Colab)
+- numpy 2.5
+- scikit-learn 1.9
+- torch 2.14 (Colab's preinstalled GPU build)
 - xarray, netCDF4
 - copernicusmarine 2.x
 - cartopy, cmocean, seaborn
-- codecarbon (optional, installed by the emissions-tracking cell)
+- codecarbon 3.3
 
 See `requirements.txt` for the complete environment.
 

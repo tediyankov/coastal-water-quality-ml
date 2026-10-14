@@ -1,10 +1,9 @@
-# Versions used for the end-to-end test of the notebook (Python 3.11).
-# numpy / scipy / scikit-learn are pinned to match the Colab install cell.
-# On Colab, torch is installed from the CUDA 11.8 index (see the notebook's install cell).
-numpy==1.26.4
-scipy==1.13.1
-scikit-learn==1.4.2
-pandas==2.2.3
+# Versions used for the end-to-end test of the notebook (Python 3.13, matching Google Colab).
+# The Colab install cell deliberately does not pin versions; these are for local reproduction.
+numpy==2.5.4
+scipy==1.18.1
+scikit-learn==1.9.1
+pandas==3.0.6
 xarray==2026.9.0
 netCDF4==1.7.4
 copernicusmarine==2.5.0
@@ -14,5 +13,4 @@ cartopy==0.26.0
 cmocean==4.0.3
 torch==2.14.1
 ipython==9.17.1
-# optional: emissions tracking
-codecarbon>=2.8
+codecarbon==3.3.1

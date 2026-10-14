@@ -15,7 +15,7 @@
   - **Naive baselines:** training mean, pixel mean, pixel monthly climatology, pixel ±15-day climatology, RF on (lat, lon), RF on (lat, lon, season).
 - **Inputs (features):** SST (CMEMS L4, °C), sin/cos of calendar month, latitude, longitude. The CNN receives a 2-channel patch (normalised SST + land/validity mask) plus the 4 non-SST scalars.
 - **Targets:** log₁₀(Chl-a) (CMEMS L4), NDCI-like index (Rrs670 − Rrs555)/(Rrs670 + Rrs555), log₁₀(Rrs670/Rrs490) turbidity proxy (both from CMEMS L3 Rrs).
-- **Training algorithms and parameters:** trees use scikit-learn defaults beyond the parameters above. The CNN uses MSE loss, Adam (lr 1e-3, weight decay 1e-4), a cosine LR schedule, batch size 512, at most 20 epochs, and early stopping on validation RMSE with patience 4. The seed is fixed at 42.
+- **Training algorithms and parameters:** trees use scikit-learn defaults beyond the parameters above. The CNN is trained on standardised targets (training mean 0, standard deviation 1; predictions are converted back) with MSE loss, Adam (lr 3e-4, weight decay 1e-4), a cosine LR schedule, batch size 512, at most 20 epochs, and early stopping on validation RMSE with patience 4. The seed is fixed at 42.
 - **Fairness constraints:** not applicable (no people-related data).
 - **Paper or other resource:** the tutorial notebook in `notebook/`.
 - **Citation details:** see the repository README.
@@ -53,7 +53,8 @@
 
 - **Unitary results:** the notebook produces test-set tables of R², RMSE, POD and CSI for every model × target, a validation-to-test generalisation table, and automated verdicts (best baseline vs best tree model, the value of SST, and the value of spatial context).
 - **Intersectional results:** CNN 9×9 vs 1×1 RMSE by coastal/offshore and by SST-gradient tercile. Random-location vs spatial-block R² with and without coordinates.
-- Exact numbers depend on the CMEMS data version and are printed when the notebook is run. They are not hard-coded here.
+- Headline results (2022 test year): best tree models and the best pixel climatology are within ±0.02 R² for every target (Chl-a ≈ 0.48–0.50, NDCI-like ≈ 0.35, turbidity ≈ 0.41–0.42). SST adds no robust skill beyond location and season. The 9×9 CNN beats the 1×1 CNN for NDCI-like and turbidity (+0.03 to +0.06 R²) but not for Chl-a, and both CNNs trail the Random Forest. All models lose about 0.3 R² from 2021 to 2022.
+- Exact numbers depend on the CMEMS data version and are printed when the notebook is run.
 
 ## Ethical Considerations
 
@@ -64,7 +65,7 @@
 ## Caveats and Recommendations
 
 - Targets are satellite proxies. The NDCI-like index is not NDCI (no 708 nm band in the multi-sensor archive). The turbidity proxy is uncalibrated and was checked only by rank agreement with KD490/BBP443, which share the same reflectance inputs.
-- The three targets are strongly correlated (r ≈ 0.72–0.93), so they are not independent tasks.
+- The three targets are strongly correlated (r = 0.72–0.92), so they are not independent tasks.
 - Training and evaluation use clear-sky days only, so performance on cloudy days is untested.
 - Location and season dominate. Lat/lon allow location memorisation, quantified with spatial block CV.
 - Only two training years, one validation year, one test year and one CNN seed are used.

@@ -32,7 +32,7 @@ The tutorial uses daily satellite products for the Northern Adriatic Sea (12.0�
 - **Is any information missing?** Yes. L3 reflectance is missing under clouds and where quality flags fail, and land pixels have no values. Pixel-days with any missing input or target are dropped.
 - **Are relationships between instances explicit?** Implicitly: each instance stores its (time, row, column) position in the data cube. This is used to extract SST patches for the CNN and to build spatial blocks.
 - **Recommended data splits:** temporal: train 2019–2020, validate 2021, test 2022. Spatial block cross-validation (0.5° blocks) is used to assess generalisation to unseen locations.
-- **Errors, noise or redundancies:** satellite retrieval errors (atmospheric correction, adjacency effects near the coast, sensor merging). Negative or near-zero red reflectance in clear water. Strong spatial and temporal autocorrelation between neighbouring pixel-days. The three targets are strongly inter-correlated (r ≈ 0.72–0.93), and two of them share the Rrs(670) numerator.
+- **Errors, noise or redundancies:** satellite retrieval errors (atmospheric correction, adjacency effects near the coast, sensor merging). Negative or near-zero red reflectance in clear water. Strong spatial and temporal autocorrelation between neighbouring pixel-days. The three targets are strongly inter-correlated (r = 0.72–0.92), and two of them share the Rrs(670) numerator.
 - **Self-contained?** No. The notebook downloads the data from CMEMS at run time (free account required). CMEMS maintains versioned multi-year products, but reprocessing can update values, so results may change slightly between product versions.
 - **Confidential, offensive or person-related data?** No.
 
