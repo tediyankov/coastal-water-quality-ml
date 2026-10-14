@@ -77,19 +77,19 @@ If everything was tracked, write **None known**.
 - [x] Other: CMEMS data download and remote storage energy is not included; development/debugging runs are not included.[Describe]
 
 **CPU:**  
-TODO: fill from `emissions.csv` (`cpu_model`) after the Colab run
+Intel(R) Xeon(R) CPU @ 2.00GHz, 2 cores
 
 **GPU or other accelerator:**  
 1 × NVIDIA T4 (Colab)
 
 **RAM:**  
-TODO: fill from `emissions.csv` (`ram_total_size`)
+12.7 GB
 
 **Computing provider:**  
 Google Colab (Google Cloud)
 
 **Computing location or cloud region:**  
-TODO: fill from `emissions.csv` (`country_name`, `region`)
+United States, South Carolina (Google Colab runtime, as detected by CodeCarbon)
 
 > Report the hardware that performed the computation. Location is
 > useful because electricity can have different carbon emissions
@@ -111,22 +111,24 @@ TODO: fill from `emissions.csv` (`country_name`, `region`)
 CodeCarbon
 
 **Tool version:**  
-TODO: fill from `emissions.csv` (`codecarbon_version`)
+3.3.1
 
 **Number of runs included:**  
 1 (one complete end-to-end notebook execution)
 
 **Total computing time:**  
-TODO: fill from `emissions.csv` (`duration`) [Hours / Not measured]
+1.67 hours (6,008 s), one complete end-to-end run on 2026-10-14
 
 **Energy used:**  
-TODO: fill from `emissions.csv` (`energy_consumed`) [kWh / Not measured]
+0.058 kWh (GPU 0.039 kWh, RAM 0.017 kWh, CPU 0.003 kWh)
 
 **Carbon emissions:**  
-TODO: fill from `emissions.csv` (`emissions`) [kg CO2e / Not measured]
+0.017 kg CO2e (16.7 g CO2e)
 
 **Source used to determine the carbon emissions of the electricity:**  
 CodeCarbon (regional grid carbon intensity)
+
+> The raw CodeCarbon output is in `emissions-reporting/emissions.csv`. CodeCarbon did not detect the cloud provider (`on_cloud = N`) and used a PUE of 1.0, so data-centre overheads such as cooling are not included in these figures.
 
 > If you use CodeCarbon, report the values produced by the tracked
 > experiment and record the version you used. Keep the units with
