@@ -16,11 +16,10 @@ The tutorial puts as much weight on *evaluating* models honestly as on training 
 
 ### Authors:
 
-- **[Author full name]**, [Affiliation/Institution], [contact email]
+- anonymous for now
+[author 1 fullname], [Affiliation/Institution] , [contact email]
 
-> Reminder for Round II reviews please keep all tutorial materials anonymized to support the double-blind review process.
-
-Originally presented at the [insert CCAI event or workshop full name with the year].
+Originally delivered as a tutorial at the CCAI 2026 Virtual Summer School, as part of the AI for Oceans and Marine Science module.
 
 ## Learning Objectives
 
@@ -48,6 +47,7 @@ Participants should be familiar with:
 
 ### Tutorial walkthrough video
 
+(anonymous for now)
 ➡️ [**Video URL**](url)
 **Duration:** [XX minutes]
 
@@ -87,7 +87,7 @@ See `requirements.txt` for the complete environment.
 
 ## Access this tutorial
 
-We recommend executing this notebook in a Colab environment to gain access to GPUs and to manage all necessary dependencies. <a target="_blank" href="https://colab.research.google.com/github/tediyankov/coastal-water-quality-ml/blob/main/notebook/monitoring_coastal_water_quality_with_ml.ipynb">
+We recommend executing this notebook in a Colab environment to gain access to GPUs and to manage all necessary dependencies. <a target="_blank" href="https://colab.research.google.com/drive/12MiEdHONfEk1NCU5c0S-Ns95nxgyheSc?usp=sharing">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
 </a>
 
@@ -141,8 +141,10 @@ Usage of this tutorial is subject to the MIT License.
 
 ### Plain Text
 
+(anonymous for now)
 [Insert plain text citation of accepted submission here.]
 
 ### BibTeX
 
+(anonymous for now)
 [Insert BibTex citation of accepted submission here.]
